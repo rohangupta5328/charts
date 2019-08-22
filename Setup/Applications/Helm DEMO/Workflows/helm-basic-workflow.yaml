@@ -35,12 +35,13 @@ phases:
           connectorId: 98hJnfRYRQyIGp3uUJj27w
           commitId: null
           branch: master
-          filePath: stable/hackmd/values.yaml
+          filePath: stable/hackmd/
           useBranch: true
         templateExpressions: null
         templateVersion: null
         helmReleaseNamePrefix: ${service.name}-${env.name}-${infra.helm.shortId}
         connectionType: branch
+        useBranch: true
         templateVariables: null
     stepsInParallel: false
   - type: VERIFY_SERVICE
