@@ -3,6 +3,6 @@ type: APPLICATION_MANIFEST
 gitFileConfig:
   branch: master
   connectorName: Helm Repos
-  filePath: stable/hackmd/values.yaml
+  filePath: stable/hackmd/
   useBranch: true
 storeType: HelmSourceRepo
