@@ -35,7 +35,7 @@ phases:
           connectorId: 98hJnfRYRQyIGp3uUJj27w
           commitId: null
           branch: master
-          filePath: stable/hackmd/
+          filePath: stable/hackmd/values.yaml
           useBranch: true
         templateExpressions: null
         templateVersion: null
