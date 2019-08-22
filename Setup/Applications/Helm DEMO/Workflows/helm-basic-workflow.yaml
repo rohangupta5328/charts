@@ -28,6 +28,20 @@ phases:
     steps:
     - type: HELM_DEPLOY
       name: Helm Deploy
+      properties:
+        templateUuid: null
+        steadyStateTimeout: 10
+        gitFileConfig:
+          connectorId: 98hJnfRYRQyIGp3uUJj27w
+          commitId: null
+          branch: master
+          filePath: stable/hackmd/values.yaml
+          useBranch: true
+        templateExpressions: null
+        templateVersion: null
+        helmReleaseNamePrefix: ${service.name}-${env.name}-${infra.helm.shortId}
+        connectionType: branch
+        templateVariables: null
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
