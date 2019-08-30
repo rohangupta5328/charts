@@ -31,16 +31,10 @@ phases:
       properties:
         templateUuid: null
         steadyStateTimeout: 10
-        gitFileConfig:
-          connectorId: 98hJnfRYRQyIGp3uUJj27w
-          commitId: null
-          branch: master
-          filePath: stable/hackmd/values.yaml
-          useBranch: true
+        gitFileConfig: null
         templateExpressions: null
         templateVersion: null
         helmReleaseNamePrefix: ${service.name}-${env.name}-${infra.helm.shortId}
-        connectionType: branch
         useBranch: true
         templateVariables: null
     stepsInParallel: false
