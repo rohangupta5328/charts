@@ -1,0 +1,8 @@
+harnessApiVersion: '1.0'
+type: DIRECT_KUBERNETES
+computeProviderName: CS Cluster
+computeProviderType: KUBERNETES_CLUSTER
+deploymentType: HELM
+infraMappingType: DIRECT_KUBERNETES
+namespace: node
+serviceName: node-es
