@@ -1,0 +1,19 @@
+harnessApiVersion: '1.0'
+type: CANARY
+description: Canary Helm Metric Server Deployment
+envName: Helm
+failureStrategies:
+- executionScope: WORKFLOW
+  failureTypes:
+  - APPLICATION_ERROR
+  repairActionCode: ROLLBACK_WORKFLOW
+  retryCount: 0
+notificationRules:
+- conditions:
+  - FAILED
+  executionScope: WORKFLOW
+  notificationGroupAsExpression: false
+  userGroupAsExpression: false
+  userGroupIds:
+  - OwqgwBkJSt2Vqlv-_TNfUA
+templatized: false
