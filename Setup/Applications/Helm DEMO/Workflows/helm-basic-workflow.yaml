@@ -20,7 +20,7 @@ phases:
 - type: HELM
   computeProviderName: CS Cluster
   daemonSet: false
-  infraMappingName: Kubernetes Cluster_ CS Cluster_DIRECT_Kubernetes_node
+  infraMappingName: dev-esnode-cs
   name: Phase 1
   phaseSteps:
   - type: HELM_DEPLOY
@@ -57,7 +57,7 @@ rollbackPhases:
 - type: HELM
   computeProviderName: CS Cluster
   daemonSet: false
-  infraMappingName: Kubernetes Cluster_ CS Cluster_DIRECT_Kubernetes_node
+  infraMappingName: dev-esnode-cs
   name: Rollback Phase 1
   phaseNameForRollback: Phase 1
   phaseSteps:
