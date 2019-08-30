@@ -4,5 +4,5 @@ computeProviderName: CS Cluster
 computeProviderType: KUBERNETES_CLUSTER
 deploymentType: HELM
 infraMappingType: DIRECT_KUBERNETES
-namespace: node
+namespace: esnode
 serviceName: node-es
