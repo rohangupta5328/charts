@@ -1,6 +1,0 @@
-harnessApiVersion: '1.0'
-type: APPLICATION_MANIFEST
-helmChartConfig:
-  chartName: elasticsearch
-  connectorName: es_repo
-storeType: HelmChartRepo
