@@ -28,6 +28,14 @@ phases:
     steps:
     - type: HELM_DEPLOY
       name: Helm Deploy
+      properties:
+        templateUuid: null
+        steadyStateTimeout: 10
+        gitFileConfig: null
+        templateExpressions: null
+        templateVersion: null
+        helmReleaseNamePrefix: metric-server
+        templateVariables: null
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
