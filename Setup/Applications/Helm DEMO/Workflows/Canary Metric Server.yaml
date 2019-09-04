@@ -29,13 +29,13 @@ phases:
     - type: HELM_DEPLOY
       name: Helm Deploy
       properties:
-        templateUuid: null
-        steadyStateTimeout: 10
         gitFileConfig: null
-        templateExpressions: null
-        templateVersion: null
         helmReleaseNamePrefix: metric-server
+        steadyStateTimeout: 10
+        templateExpressions: null
+        templateUuid: null
         templateVariables: null
+        templateVersion: null
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
@@ -58,13 +58,13 @@ phases:
     - type: HELM_DEPLOY
       name: Helm Deploy
       properties:
-        templateUuid: null
-        steadyStateTimeout: 10
         gitFileConfig: null
-        templateExpressions: null
-        templateVersion: null
         helmReleaseNamePrefix: metric-server
+        steadyStateTimeout: 10
+        templateExpressions: null
+        templateUuid: null
         templateVariables: null
+        templateVersion: null
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service

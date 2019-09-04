@@ -29,14 +29,14 @@ phases:
     - type: HELM_DEPLOY
       name: Helm Deploy
       properties:
-        templateUuid: null
-        steadyStateTimeout: 10
         gitFileConfig: null
-        templateExpressions: null
-        templateVersion: null
         helmReleaseNamePrefix: ${service.name}-${env.name}-${infra.helm.shortId}
-        useBranch: true
+        steadyStateTimeout: 10
+        templateExpressions: null
+        templateUuid: null
         templateVariables: null
+        templateVersion: null
+        useBranch: true
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
