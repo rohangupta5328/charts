@@ -5,4 +5,5 @@ computeProviderType: KUBERNETES_CLUSTER
 deploymentType: HELM
 infraMappingType: DIRECT_KUBERNETES
 namespace: esnode
+releaseName: ${infra.kubernetes.infraId}
 serviceName: metric-server
