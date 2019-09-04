@@ -1,6 +1,7 @@
 harnessApiVersion: '1.0'
 type: APPLICATION_MANIFEST
 helmChartConfig:
-  chartName: metric server
-  connectorName: metric server
+  chartName: bitnami/kubeapps
+  chartVersion: 2.1.1
+  connectorName: bitnami
 storeType: HelmChartRepo
