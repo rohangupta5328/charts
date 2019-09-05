@@ -1,5 +1,9 @@
 harnessApiVersion: '1.0'
 type: SERVICE
 artifactType: DOCKER
+configVariables:
+- name: version
+  value: 0.3.2
+  valueType: TEXT
 deploymentType: HELM
 description: metroc server helm deployment via Bitami Helm Chart
