@@ -43,6 +43,23 @@ phases:
         tags: ''
         templateVariables: ''
         timeoutMillis: 60000
+    - type: SHELL_SCRIPT
+      name: Shell Script_2
+      properties:
+        commandPath: null
+        connectionAttributes: null
+        executeOnDelegate: true
+        host: null
+        outputVars: ''
+        publishAsVar: false
+        scriptString: helm list
+        scriptType: BASH
+        sshKeyRef: null
+        sweepingOutputName: null
+        sweepingOutputScope: null
+        tags: ''
+        templateVariables: ''
+        timeoutMillis: 60000
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
