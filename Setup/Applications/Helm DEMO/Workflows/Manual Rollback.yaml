@@ -45,26 +45,6 @@ phases:
         templateVariables: null
         templateVersion: null
         timeoutMillis: 60000
-    - type: SHELL_SCRIPT
-      name: manual rollback
-      properties:
-        commandPath: null
-        connectionAttributes: null
-        connectionType: SSH
-        executeOnDelegate: true
-        host: null
-        outputVars: ''
-        publishAsVar: false
-        scriptString: helm rollback ${service.name}-${env.name}-${infra.helm.shortId} ${serviceVariable.version}
-        scriptType: BASH
-        sshKeyRef: null
-        sweepingOutputName: null
-        sweepingOutputScope: null
-        tags: ''
-        templateUuid: null
-        templateVariables: null
-        templateVersion: null
-        timeoutMillis: 60000
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
