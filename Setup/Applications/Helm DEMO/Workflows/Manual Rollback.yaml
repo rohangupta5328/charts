@@ -55,7 +55,7 @@ phases:
         host: null
         outputVars: ''
         publishAsVar: false
-        scriptString: helm rollback ${service.name}-${env.name}-${infra.helm.shortId} ${service.version}
+        scriptString: helm rollback ${service.name}-${env.name}-${infra.helm.shortId} ${serviceVariable.version}
         scriptType: BASH
         sshKeyRef: null
         sweepingOutputName: null
