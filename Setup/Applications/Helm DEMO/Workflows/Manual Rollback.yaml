@@ -46,7 +46,7 @@ phases:
         templateVersion: null
         timeoutMillis: 60000
     - type: SHELL_SCRIPT
-      name: Shell Script
+      name: manual rollback
       properties:
         commandPath: null
         connectionAttributes: null
@@ -60,7 +60,9 @@ phases:
         sweepingOutputName: null
         sweepingOutputScope: null
         tags: ''
-        templateVariables: ''
+        templateUuid: null
+        templateVariables: null
+        templateVersion: null
         timeoutMillis: 60000
     stepsInParallel: false
   - type: VERIFY_SERVICE
