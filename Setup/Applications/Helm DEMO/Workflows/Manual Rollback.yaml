@@ -27,7 +27,7 @@ phases:
     name: Deploy Containers
     steps:
     - type: SHELL_SCRIPT
-      name: Shell Script_2
+      name: list charts
       properties:
         commandPath: null
         connectionAttributes: null
@@ -41,7 +41,9 @@ phases:
         sweepingOutputName: null
         sweepingOutputScope: null
         tags: ''
-        templateVariables: ''
+        templateUuid: null
+        templateVariables: null
+        templateVersion: null
         timeoutMillis: 60000
     - type: SHELL_SCRIPT
       name: Shell Script
