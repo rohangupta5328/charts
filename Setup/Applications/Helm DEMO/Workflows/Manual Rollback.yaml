@@ -50,11 +50,12 @@ phases:
       properties:
         commandPath: null
         connectionAttributes: null
+        connectionType: SSH
         executeOnDelegate: true
         host: null
         outputVars: ''
         publishAsVar: false
-        scriptString: helm rollback ${service.name}-${env.name}-${infra.helm.shortId} 0.3.2
+        scriptString: helm rollback ${service.name}-${env.name}-${infra.helm.shortId} ${service.version}
         scriptType: BASH
         sshKeyRef: null
         sweepingOutputName: null
