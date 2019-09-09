@@ -28,3 +28,19 @@ pipelineStages:
     timeoutMillis: 604800000
     approvalStateType: USER_GROUP
   stageName: STAGE 2
+- type: ENV_STATE
+  disable: false
+  name: Deploy to Production
+  parallel: false
+  stageName: STAGE 3
+  workflowName: helm-basic-workflow
+  workflowVariables:
+  - entityType: INFRASTRUCTURE_MAPPING
+    name: ServiceInfra_HELM
+    value: Kubernetes Cluster_ CS Cluster_DIRECT_Kubernetes_prod
+  - entityType: ENVIRONMENT
+    name: Environment
+    value: prod
+  - entityType: SERVICE
+    name: Service
+    value: metric-server
