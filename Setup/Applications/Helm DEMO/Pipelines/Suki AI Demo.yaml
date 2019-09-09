@@ -18,3 +18,9 @@ pipelineStages:
   - entityType: SERVICE
     name: Service
     value: metric-server
+- type: ENV_STATE
+  disable: false
+  name: Deploy Kubewatch to Prod
+  parallel: false
+  stageName: STAGE 2
+  workflowName: Canary Kubewatch V2
