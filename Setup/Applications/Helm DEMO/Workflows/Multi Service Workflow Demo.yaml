@@ -46,6 +46,27 @@ phases:
   provisionNodes: false
   serviceName: k8sv2
   statefulSet: false
+- type: HELM
+  computeProviderName: CS Cluster
+  daemonSet: false
+  infraMappingName: Kubernetes Cluster_ CS Cluster_DIRECT_Kubernetes_prod
+  name: Phase 2
+  phaseSteps:
+  - type: HELM_DEPLOY
+    name: Deploy Containers
+    steps:
+    - type: HELM_DEPLOY
+      name: Helm Deploy
+    stepsInParallel: false
+  - type: VERIFY_SERVICE
+    name: Verify Service
+    stepsInParallel: false
+  - type: WRAP_UP
+    name: Wrap Up
+    stepsInParallel: false
+  provisionNodes: false
+  serviceName: metric-server
+  statefulSet: false
 rollbackPhases:
 - type: KUBERNETES
   computeProviderName: CS Cluster
@@ -65,5 +86,31 @@ rollbackPhases:
     stepsInParallel: false
   provisionNodes: false
   serviceName: k8sv2
+  statefulSet: false
+- type: HELM
+  computeProviderName: CS Cluster
+  daemonSet: false
+  infraMappingName: Kubernetes Cluster_ CS Cluster_DIRECT_Kubernetes_prod
+  name: Rollback Phase 2
+  phaseNameForRollback: Phase 2
+  phaseSteps:
+  - type: HELM_DEPLOY
+    name: Deploy Containers
+    phaseStepNameForRollback: Deploy Containers
+    statusForRollback: SUCCESS
+    steps:
+    - type: HELM_ROLLBACK
+      name: Helm Rollback
+    stepsInParallel: false
+  - type: VERIFY_SERVICE
+    name: Verify Service
+    phaseStepNameForRollback: Deploy Containers
+    statusForRollback: SUCCESS
+    stepsInParallel: false
+  - type: WRAP_UP
+    name: Wrap Up
+    stepsInParallel: false
+  provisionNodes: false
+  serviceName: metric-server
   statefulSet: false
 templatized: false
