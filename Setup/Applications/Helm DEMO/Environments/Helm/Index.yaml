@@ -2,3 +2,8 @@ harnessApiVersion: '1.0'
 type: ENVIRONMENT
 description: dev
 environmentType: NON_PROD
+variableOverrides:
+- name: target
+  serviceName: metric-server
+  value: qa
+  valueType: TEXT
