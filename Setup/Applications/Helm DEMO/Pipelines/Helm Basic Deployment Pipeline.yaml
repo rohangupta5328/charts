@@ -18,3 +18,13 @@ pipelineStages:
   - entityType: SERVICE
     name: Service
     value: metric-server
+- type: APPROVAL
+  disable: false
+  name: Approval 1
+  parallel: false
+  properties:
+    userGroups:
+    - OwqgwBkJSt2Vqlv-_TNfUA
+    timeoutMillis: 604800000
+    approvalStateType: USER_GROUP
+  stageName: STAGE 2
