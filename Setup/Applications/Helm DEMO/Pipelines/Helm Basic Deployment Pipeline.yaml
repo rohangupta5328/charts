@@ -14,7 +14,7 @@ pipelineStages:
     value: dev-esnode-cs
   - entityType: ENVIRONMENT
     name: Environment
-    value: Helm
+    value: dev
   - entityType: SERVICE
     name: Service
     value: metric-server
