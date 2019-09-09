@@ -117,4 +117,15 @@ rollbackPhases:
   provisionNodes: false
   serviceName: metric-server
   statefulSet: false
-templatized: false
+templatized: true
+userVariables:
+- type: TEXT
+  allowedValues: prod
+  fixed: false
+  mandatory: false
+  name: target
+- type: TEXT
+  allowedValues: yes, no
+  fixed: false
+  mandatory: false
+  name: approval
