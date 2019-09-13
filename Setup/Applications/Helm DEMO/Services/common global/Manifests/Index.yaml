@@ -3,6 +3,5 @@ type: APPLICATION_MANIFEST
 gitFileConfig:
   branch: master
   connectorName: commons
-  filePath: values.yaml
   useBranch: true
 storeType: Remote
