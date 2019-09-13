@@ -3,6 +3,6 @@ type: APPLICATION_MANIFEST
 gitFileConfig:
   branch: master
   connectorName: commons
-  filePath: charts/
+  filePath: charts/minio
   useBranch: true
 storeType: Remote
