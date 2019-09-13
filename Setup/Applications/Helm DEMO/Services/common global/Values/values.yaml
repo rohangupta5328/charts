@@ -1,8 +1,8 @@
-haproxyIngress: 
-enabled: false 
-minio: 
-enabled: true 
-mode: distributed 
-persistence: 
-enabled: true 
-storageClass: managed-standard-retain
+haproxyIngress:
+  enabled: false
+minio:
+  enabled: true
+  mode: distributed
+  persistence:
+    enabled: true
+    storageClass: managed-standard-retain
