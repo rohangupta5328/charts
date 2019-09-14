@@ -158,8 +158,8 @@ replicaSet:
   ## Number of replicas per each node type
   ##
   replicas:
-    secondary: 1
-    arbiter: 1
+    secondary: {{.Values.secondary}}
+    arbiter: {{.Values.arbiter}}
 
   ## Pod Disruption Budget
   ## ref: https://kubernetes.io/docs/concepts/workloads/pods/disruptions/
