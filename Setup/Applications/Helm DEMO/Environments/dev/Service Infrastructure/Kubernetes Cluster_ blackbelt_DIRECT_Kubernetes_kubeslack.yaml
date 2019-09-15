@@ -4,6 +4,6 @@ computeProviderName: blackbelt
 computeProviderType: KUBERNETES_CLUSTER
 deploymentType: KUBERNETES
 infraMappingType: DIRECT_KUBERNETES
-namespace: kubeslack
+namespace: dev
 releaseName: ${infra.kubernetes.infraId}
-serviceName: KubeSlack
+serviceName: MyChart
