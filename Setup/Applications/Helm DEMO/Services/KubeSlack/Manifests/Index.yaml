@@ -2,7 +2,7 @@ harnessApiVersion: '1.0'
 type: APPLICATION_MANIFEST
 gitFileConfig:
   branch: master
-  connectorName: kubeslack
-  filePath: kubeslack/kube-slack
+  connectorName: bintami
+  filePath: kubeslack/
   useBranch: true
-storeType: Remote
+storeType: HelmSourceRepo
