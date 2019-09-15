@@ -1,3 +1,8 @@
 harnessApiVersion: '1.0'
 type: APPLICATION_MANIFEST
-storeType: Local
+gitFileConfig:
+  branch: master
+  connectorName: kubeslack
+  filePath: kubeslack/kube-slack
+  useBranch: true
+storeType: Remote
