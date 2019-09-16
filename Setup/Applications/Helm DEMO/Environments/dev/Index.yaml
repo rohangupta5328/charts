@@ -3,6 +3,10 @@ type: ENVIRONMENT
 description: dev
 environmentType: NON_PROD
 variableOverrides:
+- name: name
+  serviceName: MyChart
+  value: dev
+  valueType: TEXT
 - name: target
   serviceName: metric-server
   value: qa
