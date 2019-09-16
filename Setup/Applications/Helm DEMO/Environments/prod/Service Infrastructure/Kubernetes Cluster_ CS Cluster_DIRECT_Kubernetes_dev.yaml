@@ -4,6 +4,6 @@ computeProviderName: CS Cluster
 computeProviderType: KUBERNETES_CLUSTER
 deploymentType: KUBERNETES
 infraMappingType: DIRECT_KUBERNETES
-namespace: dev
+namespace: prod
 releaseName: ${infra.kubernetes.infraId}
-serviceName: k8sv2
+serviceName: kubewatch
