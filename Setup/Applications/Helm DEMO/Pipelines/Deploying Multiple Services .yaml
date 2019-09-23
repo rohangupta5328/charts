@@ -1,10 +1,3 @@
 harnessApiVersion: '1.0'
 type: PIPELINE
 description: Deploying Multiple Helm Services
-pipelineStages:
-- type: ENV_STATE
-  disable: false
-  name: Deploy Kubewatch to Prod
-  parallel: false
-  stageName: STAGE 2
-  workflowName: Canary Kubewatch V2
