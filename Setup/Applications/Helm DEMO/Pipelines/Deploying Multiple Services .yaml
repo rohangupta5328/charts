@@ -4,22 +4,6 @@ description: Deploying Multiple Helm Services
 pipelineStages:
 - type: ENV_STATE
   disable: false
-  name: Deploy Metric Server to Dev
-  parallel: false
-  stageName: STAGE 1
-  workflowName: helm-basic-workflow
-  workflowVariables:
-  - entityType: INFRASTRUCTURE_MAPPING
-    name: ServiceInfra_HELM
-    value: dev-esnode-cs
-  - entityType: ENVIRONMENT
-    name: Environment
-    value: dev
-  - entityType: SERVICE
-    name: Service
-    value: metric-server
-- type: ENV_STATE
-  disable: false
   name: Deploy Kubewatch to Prod
   parallel: false
   stageName: STAGE 2
