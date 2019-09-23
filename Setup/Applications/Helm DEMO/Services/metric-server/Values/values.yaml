@@ -14,4 +14,4 @@
 #   - Replaced with the Docker image tag
 #
 # ---
-namespace : ${NAMESPACE}
+namespace : helmBasic
