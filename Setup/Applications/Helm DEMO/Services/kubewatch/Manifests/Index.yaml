@@ -2,6 +2,5 @@ harnessApiVersion: '1.0'
 type: APPLICATION_MANIFEST
 helmChartConfig:
   chartName: stable/kubewatch
-  chartVersion: ${workflow.variables.version}
   connectorName: bitnami
 storeType: HelmChartRepo
