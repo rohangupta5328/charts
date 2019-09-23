@@ -20,7 +20,7 @@ phases:
 - type: HELM
   computeProviderName: CS Cluster
   daemonSet: false
-  infraMappingName: dev-esnode-cs
+  infraMappingName: dev-metric-server-blackbelt-k8s
   name: Phase 1
   phaseSteps:
   - type: HELM_DEPLOY
@@ -47,29 +47,11 @@ phases:
   provisionNodes: false
   serviceName: metric-server
   statefulSet: false
-  templateExpressions:
-  - expression: ${Service}
-    fieldName: serviceId
-    metadata:
-    - name: artifactType
-      value: DOCKER
-    - name: relatedField
-      value: ${ServiceInfra_HELM}
-    - name: entityType
-      value: SERVICE
-  - expression: ${ServiceInfra_HELM}
-    fieldName: infraMappingId
-    metadata:
-    - name: artifactType
-      value: DOCKER
-    - name: relatedField
-    - name: entityType
-      value: INFRASTRUCTURE_MAPPING
 rollbackPhases:
 - type: HELM
   computeProviderName: CS Cluster
   daemonSet: false
-  infraMappingName: dev-esnode-cs
+  infraMappingName: dev-metric-server-blackbelt-k8s
   name: Rollback Phase 1
   phaseNameForRollback: Phase 1
   phaseSteps:
@@ -92,64 +74,4 @@ rollbackPhases:
   provisionNodes: false
   serviceName: metric-server
   statefulSet: false
-  templateExpressions:
-  - expression: ${Service}
-    fieldName: serviceId
-    metadata:
-    - name: artifactType
-      value: DOCKER
-    - name: relatedField
-      value: ${ServiceInfra_HELM}
-    - name: entityType
-      value: SERVICE
-  - expression: ${ServiceInfra_HELM}
-    fieldName: infraMappingId
-    metadata:
-    - name: artifactType
-      value: DOCKER
-    - name: relatedField
-    - name: entityType
-      value: INFRASTRUCTURE_MAPPING
-templateExpressions:
-- expression: ${Environment}
-  fieldName: envId
-  metadata:
-  - name: artifactType
-    value: DOCKER
-  - name: relatedField
-  - name: entityType
-    value: ENVIRONMENT
-- expression: ${Service}
-  fieldName: serviceId
-  metadata:
-  - name: artifactType
-    value: DOCKER
-  - name: relatedField
-    value: ${ServiceInfra_HELM}
-  - name: entityType
-    value: SERVICE
-- expression: ${ServiceInfra_HELM}
-  fieldName: infraMappingId
-  metadata:
-  - name: artifactType
-    value: DOCKER
-  - name: relatedField
-  - name: entityType
-    value: INFRASTRUCTURE_MAPPING
-templatized: true
-userVariables:
-- type: ENTITY
-  description: Variable for Environment entity
-  fixed: false
-  mandatory: true
-  name: Environment
-- type: ENTITY
-  description: Variable for Service entity
-  fixed: false
-  mandatory: true
-  name: Service
-- type: ENTITY
-  description: Variable for Service Infra-structure entity
-  fixed: false
-  mandatory: true
-  name: ServiceInfra_HELM
+templatized: false
