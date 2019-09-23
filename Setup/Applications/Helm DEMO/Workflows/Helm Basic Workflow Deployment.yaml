@@ -73,4 +73,6 @@ rollbackPhases:
   provisionNodes: false
   serviceName: metric-server
   statefulSet: false
+tags:
+  demo: helmV1
 templatized: false
