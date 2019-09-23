@@ -61,4 +61,10 @@ rollbackPhases:
   provisionNodes: false
   serviceName: kubewatch
   statefulSet: false
-templatized: false
+templatized: true
+userVariables:
+- type: TEXT
+  fixed: false
+  mandatory: false
+  name: versions
+  value: 0.8.7
