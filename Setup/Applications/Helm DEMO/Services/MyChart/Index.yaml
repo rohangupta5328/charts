@@ -2,6 +2,9 @@ harnessApiVersion: '1.0'
 type: SERVICE
 artifactType: DOCKER
 configVariables:
+- name: primaryName
+  value: nginx-blue-green-primary
+  valueType: TEXT
 - name: name
   value: mychart
   valueType: TEXT
