@@ -1,7 +1,7 @@
 harnessApiVersion: '1.0'
 type: ROLLING
 description: Rolling deployment with Kubewatch in K8V2 setup
-envName: dev
+envName: rolling-dev
 failureStrategies:
 - executionScope: WORKFLOW
   failureTypes:
@@ -20,7 +20,7 @@ phases:
 - type: KUBERNETES
   computeProviderName: blackbelt
   daemonSet: false
-  infraMappingName: kubewatch-blackbelt-k8s
+  infraMappingName: rolling-dev-blackbelt-k8s
   name: Rolling
   phaseSteps:
   - type: K8S_PHASE_STEP
@@ -42,7 +42,7 @@ rollbackPhases:
 - type: KUBERNETES
   computeProviderName: blackbelt
   daemonSet: false
-  infraMappingName: kubewatch-blackbelt-k8s
+  infraMappingName: rolling-dev-blackbelt-k8s
   name: Rollback Rolling
   phaseNameForRollback: Rolling
   phaseSteps:
