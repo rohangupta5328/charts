@@ -20,7 +20,7 @@ phases:
 - type: KUBERNETES
   computeProviderName: CS Cluster
   daemonSet: false
-  infraMappingName: kubewatch-esnode-cs-cluster
+  infraMappingName: kubewatch-blackbelt-k8s
   name: Canary
   phaseSteps:
   - type: K8S_PHASE_STEP
@@ -62,7 +62,7 @@ phases:
 - type: KUBERNETES
   computeProviderName: CS Cluster
   daemonSet: false
-  infraMappingName: kubewatch-esnode-cs-cluster
+  infraMappingName: kubewatch-blackbelt-k8s
   name: Primary
   phaseSteps:
   - type: K8S_PHASE_STEP
@@ -84,7 +84,7 @@ rollbackPhases:
 - type: KUBERNETES
   computeProviderName: CS Cluster
   daemonSet: false
-  infraMappingName: kubewatch-esnode-cs-cluster
+  infraMappingName: kubewatch-blackbelt-k8s
   name: Rollback Canary
   phaseNameForRollback: Canary
   phaseSteps:
@@ -103,7 +103,7 @@ rollbackPhases:
 - type: KUBERNETES
   computeProviderName: CS Cluster
   daemonSet: false
-  infraMappingName: kubewatch-esnode-cs-cluster
+  infraMappingName: kubewatch-blackbelt-k8s
   name: Rollback Primary
   phaseNameForRollback: Primary
   phaseSteps:
