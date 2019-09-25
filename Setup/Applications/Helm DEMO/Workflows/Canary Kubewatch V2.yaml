@@ -98,6 +98,24 @@ phases:
   provisionNodes: false
   serviceName: kubewatch
   statefulSet: false
+  templateExpressions:
+  - expression: ${Service2}
+    fieldName: serviceId
+    metadata:
+    - name: artifactType
+      value: DOCKER
+    - name: relatedField
+      value: ${ServiceInfra_Kubernetes2}
+    - name: entityType
+      value: SERVICE
+  - expression: ${ServiceInfra_Kubernetes2}
+    fieldName: infraMappingId
+    metadata:
+    - name: artifactType
+      value: DOCKER
+    - name: relatedField
+    - name: entityType
+      value: INFRASTRUCTURE_MAPPING
 rollbackPhases:
 - type: KUBERNETES
   computeProviderName: blackbelt
@@ -158,6 +176,24 @@ rollbackPhases:
   provisionNodes: false
   serviceName: kubewatch
   statefulSet: false
+  templateExpressions:
+  - expression: ${Service2}
+    fieldName: serviceId
+    metadata:
+    - name: artifactType
+      value: DOCKER
+    - name: relatedField
+      value: ${ServiceInfra_Kubernetes2}
+    - name: entityType
+      value: SERVICE
+  - expression: ${ServiceInfra_Kubernetes2}
+    fieldName: infraMappingId
+    metadata:
+    - name: artifactType
+      value: DOCKER
+    - name: relatedField
+    - name: entityType
+      value: INFRASTRUCTURE_MAPPING
 templatized: true
 userVariables:
 - type: ENTITY
@@ -170,6 +206,16 @@ userVariables:
   fixed: false
   mandatory: true
   name: ServiceInfra_Kubernetes
+- type: ENTITY
+  description: Variable for Service entity in Rollback Primary
+  fixed: false
+  mandatory: true
+  name: Service2
+- type: ENTITY
+  description: Variable for Service Infra-structure entity in Rollback Primary
+  fixed: false
+  mandatory: true
+  name: ServiceInfra_Kubernetes2
 - type: TEXT
   fixed: false
   mandatory: false
