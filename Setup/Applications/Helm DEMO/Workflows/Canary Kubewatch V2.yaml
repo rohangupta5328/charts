@@ -18,7 +18,7 @@ notificationRules:
   - OwqgwBkJSt2Vqlv-_TNfUA
 phases:
 - type: KUBERNETES
-  computeProviderName: CS Cluster
+  computeProviderName: blackbelt
   daemonSet: false
   infraMappingName: kubewatch-blackbelt-k8s
   name: Canary
@@ -82,7 +82,7 @@ phases:
   statefulSet: false
 rollbackPhases:
 - type: KUBERNETES
-  computeProviderName: CS Cluster
+  computeProviderName: blackbelt
   daemonSet: false
   infraMappingName: kubewatch-blackbelt-k8s
   name: Rollback Canary
