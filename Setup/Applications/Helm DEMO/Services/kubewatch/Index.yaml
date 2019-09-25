@@ -1,5 +1,9 @@
 harnessApiVersion: '1.0'
 type: SERVICE
 artifactType: DOCKER
+configVariables:
+- name: versiopn
+  value: 0.8.6
+  valueType: TEXT
 deploymentType: KUBERNETES
 description: Helm Kubernetes V2 configuration
