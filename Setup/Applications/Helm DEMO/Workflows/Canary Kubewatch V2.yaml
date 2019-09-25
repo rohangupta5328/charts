@@ -59,6 +59,24 @@ phases:
   provisionNodes: false
   serviceName: kubewatch
   statefulSet: false
+  templateExpressions:
+  - expression: ${Service}
+    fieldName: serviceId
+    metadata:
+    - name: artifactType
+      value: DOCKER
+    - name: relatedField
+      value: ${ServiceInfra_Kubernetes}
+    - name: entityType
+      value: SERVICE
+  - expression: ${ServiceInfra_Kubernetes}
+    fieldName: infraMappingId
+    metadata:
+    - name: artifactType
+      value: DOCKER
+    - name: relatedField
+    - name: entityType
+      value: INFRASTRUCTURE_MAPPING
 - type: KUBERNETES
   computeProviderName: CS Cluster
   daemonSet: false
@@ -100,6 +118,24 @@ rollbackPhases:
   provisionNodes: false
   serviceName: kubewatch
   statefulSet: false
+  templateExpressions:
+  - expression: ${Service}
+    fieldName: serviceId
+    metadata:
+    - name: artifactType
+      value: DOCKER
+    - name: relatedField
+      value: ${ServiceInfra_Kubernetes}
+    - name: entityType
+      value: SERVICE
+  - expression: ${ServiceInfra_Kubernetes}
+    fieldName: infraMappingId
+    metadata:
+    - name: artifactType
+      value: DOCKER
+    - name: relatedField
+    - name: entityType
+      value: INFRASTRUCTURE_MAPPING
 - type: KUBERNETES
   computeProviderName: CS Cluster
   daemonSet: false
@@ -124,6 +160,16 @@ rollbackPhases:
   statefulSet: false
 templatized: true
 userVariables:
+- type: ENTITY
+  description: Variable for Service entity in Rollback Canary
+  fixed: false
+  mandatory: true
+  name: Service
+- type: ENTITY
+  description: Variable for Service Infra-structure entity in Rollback Canary
+  fixed: false
+  mandatory: true
+  name: ServiceInfra_Kubernetes
 - type: TEXT
   fixed: false
   mandatory: false
