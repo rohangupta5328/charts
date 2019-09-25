@@ -40,6 +40,9 @@ phases:
       properties:
         service1: ${k8s.primaryServiceName}
         service2: ${k8s.stageServiceName}
+        templateUuid: null
+        templateVariables: null
+        templateVersion: null
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Wrap Up
