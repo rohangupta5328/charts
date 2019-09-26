@@ -1,1 +1,2 @@
 replicaSet: 4
+version: ${serviceVariable.version}
