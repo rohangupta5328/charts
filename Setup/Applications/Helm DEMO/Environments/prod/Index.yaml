@@ -7,3 +7,7 @@ variableOverrides:
   serviceName: MyChart
   value: prod
   valueType: TEXT
+- name: version
+  serviceName: kubewatch
+  value: latest
+  valueType: TEXT
