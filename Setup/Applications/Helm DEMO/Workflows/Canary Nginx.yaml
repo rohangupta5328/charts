@@ -20,7 +20,7 @@ phases:
 - type: KUBERNETES
   computeProviderName: blackbelt
   daemonSet: false
-  infraMappingName: Kubernetes Cluster_ blackbelt_DIRECT_Kubernetes_kubeslack
+  infraMappingName: blackbelt_dev_mychart
   name: Canary
   phaseSteps:
   - type: K8S_PHASE_STEP
@@ -77,7 +77,7 @@ phases:
 - type: KUBERNETES
   computeProviderName: blackbelt
   daemonSet: false
-  infraMappingName: Kubernetes Cluster_ blackbelt_DIRECT_Kubernetes_kubeslack
+  infraMappingName: blackbelt_dev_mychart
   name: Primary
   phaseSteps:
   - type: K8S_PHASE_STEP
@@ -99,7 +99,7 @@ rollbackPhases:
 - type: KUBERNETES
   computeProviderName: blackbelt
   daemonSet: false
-  infraMappingName: Kubernetes Cluster_ blackbelt_DIRECT_Kubernetes_kubeslack
+  infraMappingName: blackbelt_dev_mychart
   name: Rollback Canary
   phaseNameForRollback: Canary
   phaseSteps:
@@ -118,7 +118,7 @@ rollbackPhases:
 - type: KUBERNETES
   computeProviderName: blackbelt
   daemonSet: false
-  infraMappingName: Kubernetes Cluster_ blackbelt_DIRECT_Kubernetes_kubeslack
+  infraMappingName: blackbelt_dev_mychart
   name: Rollback Primary
   phaseNameForRollback: Primary
   phaseSteps:
