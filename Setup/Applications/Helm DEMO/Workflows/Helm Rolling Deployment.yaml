@@ -29,23 +29,6 @@ phases:
     - type: K8S_DEPLOYMENT_ROLLING
       name: Rollout Deployment
     - type: SHELL_SCRIPT
-      name: Shell Script
-      properties:
-        commandPath: null
-        connectionAttributes: null
-        executeOnDelegate: true
-        host: null
-        outputVars: ''
-        publishAsVar: false
-        scriptString: echo "${serviceVariable.NOTASECRET}"
-        scriptType: BASH
-        sshKeyRef: null
-        sweepingOutputName: null
-        sweepingOutputScope: null
-        tags: ''
-        templateVariables: ''
-        timeoutMillis: 60000
-    - type: SHELL_SCRIPT
       name: Shell Script_2
       properties:
         commandPath: null
