@@ -4,6 +4,6 @@ computeProviderName: blackbelt
 computeProviderType: KUBERNETES_CLUSTER
 deploymentType: KUBERNETES
 infraMappingType: DIRECT_KUBERNETES
-namespace: mychart
+namespace: rollingdev
 releaseName: release-${infra.kubernetes.infraId}
 serviceName: MyChart
