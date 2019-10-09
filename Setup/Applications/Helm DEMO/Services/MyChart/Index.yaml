@@ -12,4 +12,4 @@ configVariables:
   value: mychart
   valueType: TEXT
 deploymentType: KUBERNETES
-description: MyChart Nginx Sample
+description: MyChart Nginx Sample, Git sync application
