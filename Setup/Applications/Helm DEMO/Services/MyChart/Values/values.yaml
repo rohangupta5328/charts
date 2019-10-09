@@ -1,5 +1,5 @@
 replicaCount: 3
 
 env:
- - name: ANOTHER
-   value: "another"
+  config:
+    ANOTHER: "another"
