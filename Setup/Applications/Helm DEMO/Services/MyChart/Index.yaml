@@ -15,3 +15,4 @@ deploymentType: KUBERNETES
 description: MyChart Nginx Sample, Git sync application
 tags:
   demo: helmV2
+  type: gitsymc
