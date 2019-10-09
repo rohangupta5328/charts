@@ -3,3 +3,4 @@ replicaCount: 3
 env:
   config:
     ANOTHER: "anotherOne"
+    blackbelt: "Rohan"
