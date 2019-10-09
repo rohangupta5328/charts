@@ -13,3 +13,5 @@ configVariables:
   valueType: TEXT
 deploymentType: KUBERNETES
 description: MyChart Nginx Sample, Git sync application
+tags:
+  demo: helmV2
