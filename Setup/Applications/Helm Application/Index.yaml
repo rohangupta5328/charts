@@ -1,5 +1,5 @@
 harnessApiVersion: '1.0'
 type: APPLICATION
-description: Helm DEMO Application
+description: Helm DEMO Deployments
 tags:
   demo: helmV2
