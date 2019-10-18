@@ -1,7 +1,7 @@
 harnessApiVersion: '1.0'
 type: APPLICATION_MANIFEST
 gitFileConfig:
-  branch: master
+  branch: develop
   connectorName: mychart
   useBranch: true
 storeType: HelmSourceRepo
