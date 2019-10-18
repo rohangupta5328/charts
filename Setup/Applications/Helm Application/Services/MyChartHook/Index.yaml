@@ -1,0 +1,15 @@
+harnessApiVersion: '1.0'
+type: SERVICE
+artifactType: DOCKER
+configVariables:
+- name: name
+  value: mychart
+  valueType: TEXT
+- name: primaryName
+  value: nginx-blue-green-primary
+  valueType: TEXT
+- name: stageName
+  value: nginx-blue-green-stage
+  valueType: TEXT
+deploymentType: KUBERNETES
+description: MyChart Nginx Sample, Git sync application
