@@ -1,0 +1,9 @@
+harnessApiVersion: '1.0'
+type: DIRECT_KUBERNETES
+computeProviderName: blackbelt
+computeProviderType: KUBERNETES_CLUSTER
+deploymentType: HELM
+infraMappingType: DIRECT_KUBERNETES
+namespace: rollingdev
+releaseName: ${infra.kubernetes.infraId}
+serviceName: HelmHook
