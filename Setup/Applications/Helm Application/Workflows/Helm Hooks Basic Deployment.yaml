@@ -33,7 +33,7 @@ phases:
           connectorId: YRgKxN10Q_-KXBcdJt-nYQ
           commitId: null
           branch: develop
-          filePath: mychart/values.yaml
+          filePath: ./values.yaml
           useBranch: true
         helmReleaseNamePrefix: HelmHook
         steadyStateTimeout: 10
@@ -41,6 +41,7 @@ phases:
         templateUuid: null
         templateVariables: null
         templateVersion: null
+        useBranch: true
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
