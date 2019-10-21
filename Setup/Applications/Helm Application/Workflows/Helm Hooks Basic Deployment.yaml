@@ -42,6 +42,18 @@ phases:
         templateVariables: null
         templateVersion: null
         useBranch: true
+    - type: HELM_DEPLOY
+      name: Helm Deploy_2
+      properties:
+        connectionType: branch
+        gitFileConfig:
+          connectorId: YRgKxN10Q_-KXBcdJt-nYQ
+          commitId: null
+          branch: develop
+          filePath: values.yaml
+          useBranch: true
+        helmReleaseNamePrefix: ${service.name}-${env.name}-${infra.helm.shortId}
+        steadyStateTimeout: 10
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
