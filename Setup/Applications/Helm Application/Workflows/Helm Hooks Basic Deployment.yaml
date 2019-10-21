@@ -27,6 +27,20 @@ phases:
     steps:
     - type: HELM_DEPLOY
       name: Helm Deploy
+      properties:
+        connectionType: branch
+        gitFileConfig:
+          connectorId: YRgKxN10Q_-KXBcdJt-nYQ
+          commitId: null
+          branch: develop
+          filePath: mychart/values.yaml
+          useBranch: true
+        helmReleaseNamePrefix: HelmHook
+        steadyStateTimeout: 10
+        templateExpressions: null
+        templateUuid: null
+        templateVariables: null
+        templateVersion: null
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
