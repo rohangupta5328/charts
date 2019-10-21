@@ -37,6 +37,11 @@ phases:
           useBranch: true
         helmReleaseNamePrefix: ${service.name}-${env.name}-${infra.helm.shortId}
         steadyStateTimeout: 10
+        templateExpressions: null
+        templateUuid: null
+        templateVariables: null
+        templateVersion: null
+        useBranch: true
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
