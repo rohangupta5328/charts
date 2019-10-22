@@ -25,6 +25,12 @@ phases:
   - type: HELM_DEPLOY
     name: Deploy Containers
     steps:
+    - type: SHELL_SCRIPT
+      name: Create Namespace
+      properties:
+        executeOnDelegate: true
+        timeoutMillis: 600000
+      templateUri: Harness-BB/Kubernetes Commands/Create Namespace:latest
     - type: HELM_DEPLOY
       name: Helm Deploy_2
       properties:
@@ -42,12 +48,6 @@ phases:
         templateVariables: null
         templateVersion: null
         useBranch: true
-    - type: SHELL_SCRIPT
-      name: Create Namespace
-      properties:
-        executeOnDelegate: true
-        timeoutMillis: 600000
-      templateUri: Harness-BB/Kubernetes Commands/Create Namespace:latest
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
