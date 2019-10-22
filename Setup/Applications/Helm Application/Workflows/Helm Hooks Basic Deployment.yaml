@@ -25,23 +25,6 @@ phases:
   - type: HELM_DEPLOY
     name: Deploy Containers
     steps:
-    - type: SHELL_SCRIPT
-      name: Get Namespaces
-      properties:
-        commandPath: null
-        connectionAttributes: null
-        executeOnDelegate: true
-        host: null
-        outputVars: ''
-        publishAsVar: false
-        scriptString: kubectl get namespaces
-        scriptType: BASH
-        sshKeyRef: null
-        sweepingOutputName: null
-        sweepingOutputScope: null
-        tags: ''
-        templateVariables: ''
-        timeoutMillis: 60000
     - type: HELM_DEPLOY
       name: Helm Deploy_2
       properties:
