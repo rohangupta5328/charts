@@ -28,7 +28,18 @@ phases:
     - type: SHELL_SCRIPT
       name: Create Namespace
       properties:
+        commandPath: null
+        connectionAttributes: null
         executeOnDelegate: true
+        host: null
+        publishAsVar: false
+        sshKeyRef: null
+        sweepingOutputName: null
+        sweepingOutputScope: null
+        tags: ''
+        templateUuid: 8SZN_xS1TXqFylOrhLzkLw
+        templateVariables: null
+        templateVersion: latest
         timeoutMillis: 600000
       templateUri: Harness-BB/Kubernetes Commands/Create Namespace:latest
     - type: HELM_DEPLOY
