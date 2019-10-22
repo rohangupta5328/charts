@@ -42,23 +42,6 @@ phases:
         templateVersion: latest
         timeoutMillis: 600000
       templateUri: Harness-BB/Kubernetes Commands/Create Namespace:latest
-    - type: HELM_DEPLOY
-      name: Helm Deploy_2
-      properties:
-        connectionType: branch
-        gitFileConfig:
-          connectorId: YRgKxN10Q_-KXBcdJt-nYQ
-          commitId: null
-          branch: develop
-          filePath: values.yaml
-          useBranch: true
-        helmReleaseNamePrefix: ${service.name}-${env.name}-${infra.helm.shortId}
-        steadyStateTimeout: 10
-        templateExpressions: null
-        templateUuid: null
-        templateVariables: null
-        templateVersion: null
-        useBranch: true
     - type: SHELL_SCRIPT
       name: Get Namespaces
       properties:
@@ -76,6 +59,23 @@ phases:
         tags: ''
         templateVariables: ''
         timeoutMillis: 60000
+    - type: HELM_DEPLOY
+      name: Helm Deploy_2
+      properties:
+        connectionType: branch
+        gitFileConfig:
+          connectorId: YRgKxN10Q_-KXBcdJt-nYQ
+          commitId: null
+          branch: develop
+          filePath: values.yaml
+          useBranch: true
+        helmReleaseNamePrefix: ${service.name}-${env.name}-${infra.helm.shortId}
+        steadyStateTimeout: 10
+        templateExpressions: null
+        templateUuid: null
+        templateVariables: null
+        templateVersion: null
+        useBranch: true
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
