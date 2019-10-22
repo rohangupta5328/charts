@@ -4,6 +4,6 @@ computeProviderName: blackbelt
 computeProviderType: KUBERNETES_CLUSTER
 deploymentType: HELM
 infraMappingType: DIRECT_KUBERNETES
-namespace: rollingdev
+namespace: qa
 releaseName: ${infra.kubernetes.infraId}
 serviceName: HelmHook
