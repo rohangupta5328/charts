@@ -42,6 +42,23 @@ phases:
         templateVariables: null
         templateVersion: null
         useBranch: true
+    - type: SHELL_SCRIPT
+      name: Shell Script
+      properties:
+        commandPath: null
+        connectionAttributes: null
+        executeOnDelegate: true
+        host: null
+        outputVars: ''
+        publishAsVar: false
+        scriptString: kubectl get jobs -n qa
+        scriptType: BASH
+        sshKeyRef: null
+        sweepingOutputName: null
+        sweepingOutputScope: null
+        tags: ''
+        templateVariables: ''
+        timeoutMillis: 60000
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
