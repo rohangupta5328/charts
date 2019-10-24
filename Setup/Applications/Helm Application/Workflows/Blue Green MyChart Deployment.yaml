@@ -72,6 +72,15 @@ phases:
         templateUuid: null
         templateVariables: null
         templateVersion: null
+    - type: SHELL_SCRIPT
+      name: Get Services in a Namespace
+      properties:
+        executeOnDelegate: true
+        timeoutMillis: 600000
+      templateUri: Harness-BB/Kubernetes Commands/Get Services in a Namespace:latest
+      templateVariables:
+      - name: kns
+        value: dev
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Wrap Up
