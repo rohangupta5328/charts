@@ -55,6 +55,15 @@ phases:
         templateVariables: ''
         timeoutMillis: 10000
         url: http://10.138.15.219
+    - type: SHELL_SCRIPT
+      name: Get All in a Specified Namespace
+      properties:
+        executeOnDelegate: true
+        timeoutMillis: 600000
+      templateUri: Harness-BB/Kubernetes Commands/Get All in a Specified Namespace:latest
+      templateVariables:
+      - name: kns
+        value: dev
     stepsInParallel: false
   - type: WRAP_UP
     name: Wrap Up
