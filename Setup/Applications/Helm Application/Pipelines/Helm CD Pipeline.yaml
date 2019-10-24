@@ -34,3 +34,15 @@ pipelineStages:
     type: DO_NOT_SKIP
   stageName: MyChart Blue-Green
   workflowName: Blue Green MyChart Deployment
+- type: APPROVAL
+  name: Approval 2
+  parallel: false
+  properties:
+    userGroups:
+    - OwqgwBkJSt2Vqlv-_TNfUA
+    - Wx2wDXDkTzK2HBJvyzTo6w
+    timeoutMillis: 604800000
+    approvalStateType: USER_GROUP
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: STAGE 3
