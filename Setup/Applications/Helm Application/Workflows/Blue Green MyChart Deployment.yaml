@@ -48,18 +48,20 @@ phases:
         templateUuid: lFtpqFDfSY2EE7kdKSCB6Q
         templateVariables:
         - name: kns
-          description: dev namespace by default
-          mandatory: false
-          value: dev
-          fixed: false
-          metadata: null
           type: TEXT
+          value: bgdemo
+          description: dev namespace by default
         templateVersion: latest
         timeoutMillis: 600000
+        variables:
+        - name: kns
+          type: TEXT
+          value: bgdemo
+          description: dev namespace by default
       templateUri: Harness-BB/Kubernetes Commands/Get Services in a Namespace:latest
       templateVariables:
       - name: kns
-        value: dev
+        value: bgdemo
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Route Update
