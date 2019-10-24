@@ -103,6 +103,21 @@ phases:
       templateVariables:
       - name: kns
         value: bgdemo
+    - type: HTTP
+      name: HTTP
+      properties:
+        assertion: ''
+        body: ''
+        executeWithPreviousSteps: false
+        header: ''
+        method: GET
+        publishAsVar: false
+        responseProcessingExpressions: ''
+        sweepingOutputName: null
+        sweepingOutputScope: null
+        templateVariables: ''
+        timeoutMillis: 10000
+        url: http://35.233.136.206
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Wrap Up
