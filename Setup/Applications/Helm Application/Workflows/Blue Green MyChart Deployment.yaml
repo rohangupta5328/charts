@@ -143,6 +143,16 @@ phases:
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Wrap Up
+    steps:
+    - type: EMAIL
+      name: Email
+      properties:
+        body: "${app.name} was successfully deployed in ${infra.kubernetes.namespace}.\
+          \ \n\n${workflow.name} was run and the last successful run was ${workflow.lastGoodDeploymentDisplayName}\n\
+          \nThe Deployment was triggered by: ${deploymentTriggeredBy}\n\nThe URL to\
+          \ the deployment: ${deploymentUrl}"
+        subject: MyChart BlueGreen Deployment Summary
+        toAddress: rohan@harness.io
     stepsInParallel: false
   provisionNodes: false
   serviceName: MyChart
