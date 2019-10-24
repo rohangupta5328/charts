@@ -104,7 +104,7 @@ phases:
       - name: kns
         value: bgdemo
     - type: HTTP
-      name: HTTP
+      name: Health Check Primary
       properties:
         assertion: ''
         body: ''
@@ -115,7 +115,9 @@ phases:
         responseProcessingExpressions: ''
         sweepingOutputName: null
         sweepingOutputScope: null
-        templateVariables: ''
+        templateUuid: null
+        templateVariables: null
+        templateVersion: null
         timeoutMillis: 10000
         url: http://35.233.136.206
     stepsInParallel: false
