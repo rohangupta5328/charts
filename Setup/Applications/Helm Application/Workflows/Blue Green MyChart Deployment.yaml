@@ -89,9 +89,12 @@ phases:
         templateUuid: lFtpqFDfSY2EE7kdKSCB6Q
         templateVariables:
         - name: kns
-          type: TEXT
-          value: bgdemo
           description: dev namespace by default
+          mandatory: false
+          value: bgdemo
+          fixed: false
+          metadata: null
+          type: TEXT
         templateVersion: latest
         timeoutMillis: 600000
         variables:
