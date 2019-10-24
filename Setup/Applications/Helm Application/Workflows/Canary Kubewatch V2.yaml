@@ -230,8 +230,3 @@ userVariables:
   fixed: false
   mandatory: true
   name: ServiceInfra_Kubernetes2
-- type: TEXT
-  fixed: false
-  mandatory: false
-  name: version
-  value: 0.8.7
