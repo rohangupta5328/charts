@@ -35,7 +35,26 @@ phases:
     - type: SHELL_SCRIPT
       name: Get Services in a Namespace
       properties:
+        commandPath: null
+        connectionAttributes: null
+        connectionType: SSH
         executeOnDelegate: true
+        host: null
+        publishAsVar: false
+        sshKeyRef: null
+        sweepingOutputName: null
+        sweepingOutputScope: null
+        tags: ''
+        templateUuid: lFtpqFDfSY2EE7kdKSCB6Q
+        templateVariables:
+        - name: kns
+          description: dev namespace by default
+          mandatory: false
+          value: dev
+          fixed: false
+          metadata: null
+          type: TEXT
+        templateVersion: latest
         timeoutMillis: 600000
       templateUri: Harness-BB/Kubernetes Commands/Get Services in a Namespace:latest
       templateVariables:
