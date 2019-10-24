@@ -104,7 +104,7 @@ phases:
       - name: kns
         value: bgdemo
     - type: HTTP
-      name: Health Check Primary
+      name: Health Check Stage
       properties:
         assertion: ''
         body: ''
