@@ -58,12 +58,32 @@ phases:
     - type: SHELL_SCRIPT
       name: Get All in a Specified Namespace
       properties:
+        commandPath: null
+        connectionAttributes: null
         executeOnDelegate: true
+        host: null
+        publishAsVar: false
+        sshKeyRef: null
+        sweepingOutputName: null
+        sweepingOutputScope: null
+        tags: ''
+        templateUuid: qRd4jLvlSxS-bWV0zOmPqA
+        templateVariables:
+        - name: kns
+          type: TEXT
+          value: metricserver
+          description: Dev namespace by default
+        templateVersion: latest
         timeoutMillis: 600000
+        variables:
+        - name: kns
+          type: TEXT
+          value: metricserver
+          description: Dev namespace by default
       templateUri: Harness-BB/Kubernetes Commands/Get All in a Specified Namespace:latest
       templateVariables:
       - name: kns
-        value: dev
+        value: metricserver
     stepsInParallel: false
   - type: WRAP_UP
     name: Wrap Up
