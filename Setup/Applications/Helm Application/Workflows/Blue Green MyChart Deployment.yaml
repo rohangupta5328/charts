@@ -121,18 +121,20 @@ phases:
         timeoutMillis: 10000
         url: http://35.233.136.206
     - type: HTTP
-      name: Health Check Stage
+      name: Health Check Primary
       properties:
         assertion: ''
         body: ''
-        executeWithPreviousSteps: false
+        executeWithPreviousSteps: true
         header: ''
         method: GET
         publishAsVar: false
         responseProcessingExpressions: ''
         sweepingOutputName: null
         sweepingOutputScope: null
-        templateVariables: ''
+        templateUuid: null
+        templateVariables: null
+        templateVersion: null
         timeoutMillis: 10000
         url: http://34.82.100.1
     stepsInParallel: false
