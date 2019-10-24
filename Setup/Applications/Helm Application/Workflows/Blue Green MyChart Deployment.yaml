@@ -128,7 +128,7 @@ phases:
       properties:
         assertion: ''
         body: ''
-        executeWithPreviousSteps: false
+        executeWithPreviousSteps: true
         header: ''
         method: GET
         publishAsVar: false
