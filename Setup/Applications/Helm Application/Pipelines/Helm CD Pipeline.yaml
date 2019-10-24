@@ -27,3 +27,10 @@ pipelineStages:
     value: kubewatch
   - name: version
     value: 0.8.7
+- type: ENV_STATE
+  name: Deploy My Chart
+  parallel: false
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: MyChart Blue-Green
+  workflowName: Blue Green MyChart Deployment
