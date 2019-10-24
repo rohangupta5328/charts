@@ -7,7 +7,7 @@ pipelineStages:
   parallel: false
   skipCondition:
     type: DO_NOT_SKIP
-  stageName: Canary Kubewatch Dev
+  stageName: MyChart Blue-Green
   workflowName: Canary Kubewatch V2
   workflowVariables:
   - entityType: SERVICE
@@ -29,7 +29,7 @@ pipelineStages:
     value: 0.8.7
 - type: ENV_STATE
   name: Deploy My Chart
-  parallel: false
+  parallel: true
   skipCondition:
     type: DO_NOT_SKIP
   stageName: MyChart Blue-Green
@@ -45,4 +45,4 @@ pipelineStages:
     approvalStateType: USER_GROUP
   skipCondition:
     type: DO_NOT_SKIP
-  stageName: STAGE 3
+  stageName: STAGE 2
