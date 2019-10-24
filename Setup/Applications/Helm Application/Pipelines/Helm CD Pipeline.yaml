@@ -1,3 +1,29 @@
 harnessApiVersion: '1.0'
 type: PIPELINE
 description: Helm K8sV2 Pipeline
+pipelineStages:
+- type: ENV_STATE
+  name: Deploy Kubewatch
+  parallel: false
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: Canary Kubewatch Dev
+  workflowName: Canary Kubewatch V2
+  workflowVariables:
+  - entityType: SERVICE
+    name: Service2
+    value: kubewatch
+  - entityType: INFRASTRUCTURE_MAPPING
+    name: ServiceInfra_Kubernetes2
+    value: kubewatch-blackbelt-k8s
+  - entityType: INFRASTRUCTURE_MAPPING
+    name: ServiceInfra_Kubernetes
+    value: kubewatch-blackbelt-k8s
+  - entityType: ENVIRONMENT
+    name: Environment
+    value: dev
+  - entityType: SERVICE
+    name: Service
+    value: kubewatch
+  - name: version
+    value: 0.8.7
